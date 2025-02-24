@@ -1,16 +1,16 @@
+import React from "react";
+
 export default function Letter({
   letter,
   onToggle,
   isSelected,
 }: {
-  letter: { id: string; subject: string };
-  onToggle: (id: string) => void;
+  letter: { id: number; subject: string };
+  onToggle: (id: number) => void;
   isSelected: boolean;
 }) {
   return (
-    <li className={
-      isSelected ? 'selected' : ''
-    }>
+    <li className={isSelected ? "selected" : ""}>
       <label>
         <input
           type="checkbox"
@@ -22,5 +22,5 @@ export default function Letter({
         {letter.subject}
       </label>
     </li>
-  )
+  );
 }

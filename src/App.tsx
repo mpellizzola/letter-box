@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { letters } from './data.jsx';
 import Letter from './Letter.tsx';
+import React from 'react';
 
 export default function MailClient() {
   const [selectedId, setSelectedId] = useState(null);
