@@ -15,9 +15,22 @@ export default function MailClient() {
 
   return (
     <>
+      <h2>Instructions</h2>
+      <ul>
+        <li>
+          Modifica il funzionamento di questa checkbox per rendere più di una
+          lettera selezionabile
+        </li>
+        <li>
+          aggiorna dinamicamente il contatore delle lettere selezionate,
+          verificando che anche deselezionando una lettera il contatore si
+          aggiorni correttamente
+        </li>
+      </ul>
+      <hr />
       <h2>Inbox</h2>
       <ul>
-        {letters.map(letter => (
+        {letters.map((letter) => (
           <Letter
             key={letter.id}
             letter={letter}
@@ -30,9 +43,7 @@ export default function MailClient() {
         ))}
         <hr />
         <p>
-          <b>
-            You selected {selectedCount} letters
-          </b>
+          <b>You selected {selectedCount} letters</b>
         </p>
       </ul>
     </>
